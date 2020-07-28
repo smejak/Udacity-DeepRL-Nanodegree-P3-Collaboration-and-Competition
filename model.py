@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 def hidden_init(layer):
+    """Get the range for uniform distribution from the input layer size"""
     fan_in = layer.weight.data.size()[0]
     lim = 1. / np.sqrt(fan_in)
     return (-lim, lim)
@@ -33,6 +34,7 @@ class Actor(nn.Module):
         self.reset_parameters()
 
     def reset_parameters(self):
+        """Reset the weights of the network"""
         self.fc1.weight.data.uniform_(*hidden_init(self.fc1))
         self.fc2.weight.data.uniform_(*hidden_init(self.fc2))
         self.fc3.weight.data.uniform_(-3e-3, 3e-3)
@@ -71,6 +73,7 @@ class Critic(nn.Module):
         self.reset_parameters()
 
     def reset_parameters(self):
+        """Reset the weights of the network"""
         self.fcs1.weight.data.uniform_(*hidden_init(self.fcs1))
         self.fc2.weight.data.uniform_(*hidden_init(self.fc2))
         self.fc3.weight.data.uniform_(-3e-3, 3e-3)
