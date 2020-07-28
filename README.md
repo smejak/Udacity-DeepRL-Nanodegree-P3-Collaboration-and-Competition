@@ -12,7 +12,7 @@ The observation space consists of 8 variables corresponding to the position and 
 The environment is considered solved when the reward received by both agents exceeds +0.5 over 100 consecutive episodes.
 ## Getting started
 The following section was taken from [Udacity's GitHub](https://github.com/udacity/deep-reinforcement-learning#dependencies) for its simple guide on how to get your local machine ready for reinforcement learning with Unity.
-You'll need to download the appropriate environment. I am using the 20-agent MacOS version, which can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip).
+You'll need to download the appropriate environment. I am using the 20-agent MacOS version, which can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip).
 ## Dependencies
 
 To set up your python environment to run the code in this repository, follow the instructions below.
